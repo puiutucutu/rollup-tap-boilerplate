@@ -14,8 +14,8 @@ module.exports = [
   {
     input: "src/index.js",
     output: [
-      { file: pkg.main, format: "cjs" },
-      { file: pkg.module, format: "es" }
+      { file: pkg.main, format: "cjs", exports: "named" },
+      { file: pkg.module, format: "es", exports: "named" }
     ],
     plugins: [...babelPlugin]
   },
