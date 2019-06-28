@@ -26,6 +26,12 @@ test("add", function(assert) {
     /^TypeError: Supplied arg `x` or `y` is not a valid number$/,
     "Throws TypeError with expected error message when args are not numbers (using tape's `assert.throws()`)"
   );
+  
+  assert.throws(
+    () => add("2", "3"),
+    RegExp(new TypeError("Supplied arg `x` or `y` is not a valid number").toString()),
+    "Throws TypeError with expected error message when args are not numbers (using tape's `assert.throws() (using dynamic error inside RegExp())`)"
+  );
 
   assert.end();
 });
