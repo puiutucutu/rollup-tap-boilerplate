@@ -20,6 +20,15 @@ test("add", function(assert) {
       "Expected error message"
     );
   }
+  
+  assert.throws(
+    () => add("2", "3"),
+    {
+      name: "TypeError",
+      message: "Supplied arg `x` or `y` is not a valid number"
+    },
+    "Throws TypeError with expected error message when args are not numbers (using tape's `assert.throws()`)"
+  );
 
   assert.throws(
     () => add("2", "3"),
