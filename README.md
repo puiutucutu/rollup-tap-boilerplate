@@ -1,6 +1,11 @@
 # tape-rollup-boilerplate 
 
-A project containing a sample setup of tape for unit testing with code coverage and bundling with rollup and ready for npm publishing.
+A project containing boilerplate for new node projects. Ready for npm publishing.
+ 
+* `tape` for unit testing 
+* code coverage with `nyc` 
+* bundling with `rollup` and transpiling with `babel`
+* builds `.cjs`, `.esm` and `.umd` files
 
 ## Install
 
