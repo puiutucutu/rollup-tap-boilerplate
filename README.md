@@ -23,13 +23,17 @@ npm run build
 
 Will create three files in the `./dist` directory:
 
-* `*.cjs.js`
-* `*.esm.js`, 
-* `*.umd.js`. 
+* `<FILENAME>.cjs.js`
+* `<FILENAME>.esm.js`, 
+* `<FILENAME>.umd.js`. 
 
-Note that only the `*.umd.js` file is minified since it is not intended to be run through a bundler in a different project but instead used as-is. Whereas, the `*.cjs.js` and `*.esm.js` files will be transpiled with the expectation that they will be imported in node or another project (respectively) before being bundled according to that projects' settings.
+Note that only the `umd.js` file is minified since it is not intended to be run through a bundler in a different project but instead used as-is. 
 
-See these links for more details:
+The `cjs.js` and `esm.js` files will be transpiled with the expectation that they will be imported in another node project before being bundled according to that projects' settings.
+
+The difference between the `cjs` and `esm` file is that the `esm` file `"utilizes ES2015 module syntax but no other syntax features that aren't yet supported by browsers or node."` - https://webpack.js.org/guides/author-libraries/#final-steps
+
+See these links for more details regarding modules.
 
 * <https://github.com/rollup/rollup/wiki/pkg.module>
 * <https://webpack.js.org/guides/author-libraries/#final-steps>
