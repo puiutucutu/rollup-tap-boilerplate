@@ -1,7 +1,7 @@
 import commonjs from "rollup-plugin-commonjs";
 import babel from "rollup-plugin-babel";
 import json from "rollup-plugin-json";
-import resolve from "rollup-plugin-node-resolve";
+import nodeResolve from "rollup-plugin-node-resolve";
 import { terser } from "rollup-plugin-terser";
 import pkg from "./package.json";
 
@@ -35,6 +35,6 @@ module.exports = [
       format: "umd",
       name: "TRB" // Tape Rollup Boilerplate
     },
-    plugins: [resolve(), json(), ...babelPlugin, commonjs(), terser()]
+    plugins: [nodeResolve(), json(), ...babelPlugin, commonjs(), terser()]
   }
 ];
