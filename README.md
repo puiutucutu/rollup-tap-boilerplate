@@ -31,7 +31,7 @@ Note that only the `umd.js` file is minified since it is not intended to be run 
 
 The `cjs.js` and `esm.js` files will be transpiled with the expectation that they will be imported in another node project before being bundled according to that projects' settings.
 
-The difference between the `cjs.js` and `esm.js` file is that the `esm.js' file
+The difference between the `cjs.js` and `esm.js` file is that the `esm.js` file
 
 > "[...] utilizes ES2015 module syntax but no other syntax features that aren't yet supported by browsers or node."
 * https://webpack.js.org/guides/author-libraries/#final-steps
