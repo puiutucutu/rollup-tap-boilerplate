@@ -12,7 +12,7 @@
     "build": "cross-env BABEL_ENV=build rollup -c",
     "coverage": "cross-env BABEL_ENV=test nyc tape ./test/**/*.js",
     "test": "cross-env BABEL_ENV=test tape -r @babel/register ./test/**/*.js | tap-spec",
-    "prepublish": "npm run build",
+    "prepublish": "npm run test && npm run build",
     "release": "np"
   },
   "dependencies": {
