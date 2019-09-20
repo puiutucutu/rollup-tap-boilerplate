@@ -11,6 +11,7 @@ function add(x, y) {
     throw new TypeError("Supplied arg `x` or `y` is not a valid number");
   }
 
+  // try out ES6 features to see transpiled output
   const a = new Promise();
   const b = new Map();
   const values = new Set(x, y);
