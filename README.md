@@ -1,6 +1,6 @@
 # tape-rollup-boilerplate 
 
-A project containing boilerplate for new node projects. Ready for npm publishing.
+A repo containing boilerplate for new node projects. Ready for npm publishing.
  
 * `tape` for unit testing 
 * code coverage with `nyc` 
@@ -27,14 +27,11 @@ Will create three files in the `./dist` directory:
 * `<FILENAME>.esm.js`, 
 * `<FILENAME>.umd.js`. 
 
-Note that only the `umd.js` file is minified since it is not intended to be run through a bundler in a different project but instead used as-is. 
+The `umd.js` file is minified since it is intended to be used as-is.
 
-The `cjs.js` and `esm.js` files will be transpiled with the expectation that they will be imported in another node project before being bundled according to that projects' settings.
+The `cjs.js` and `esm.js` files contain transpiled javascript for ES5 environments. They are intended to be used and re-bundled by other projects.
 
-The difference between the `cjs.js` and `esm.js` file is that the `esm.js` file
-
-> "[...] utilizes ES2015 module syntax but no other syntax features that aren't yet supported by browsers or node."
-* https://webpack.js.org/guides/author-libraries/#final-steps
+  The difference between the `cjs.js` and `esm.js` file is that the `esm.js` file *`"[...] utilizes ES2015 module syntax but no other syntax features that aren't yet supported by browsers or node."`* - [Webpack Docs](https://webpack.js.org/guides/author-libraries/#final-steps)
 
 See these links for more details regarding modules.
 
@@ -44,7 +41,7 @@ See these links for more details regarding modules.
 
 ### Tests
 
-Note that `@babel/register` is used on the code before it goes to `tape` in order to facilitate the use of es6 imports with node.
+Note that `@babel/register` is used on the code before it goes to `tape` in order to facilitate the use of ES6 imports with node.
 
 ```
 npm run test
@@ -56,14 +53,26 @@ npm run test
 npm run coverage
 ```
 
+## Usage
+
+### `.babelrc` file
+
+* `targets` 
+  * set for compatability in javascript runtime environments in `ie11` and above
+  * this can be adjusted to different environments as needed (with the benefit of smaller bundle sizes) by changing this property
+* see https://babeljs.io/docs/en/next/babel-preset-env#targets
+* `useBuiltIns` 
+  * currently set to `usage` 
+  * this instructs `babel` and `corejs` to import those polyfills actually used in your code that are missing in the target runtime environment
+
 ## Resources
 
-* https://babeljs.io/docs/en/next/babel-preset-env
-* <https://ci.testling.com/guide/tape>
-
-### Using Rollup
-
-* <https://github.com/rollup/rollup-starter-lib>
-* <https://github.com/rollup/rollup-plugin-babel/issues/253>
-* <https://github.com/rollup/rollup/wiki/pkg.module>
-* <https://stackoverflow.com/questions/45327218/how-do-i-get-jest-to-run-tests-against-a-rollupbabel-build>
+* Babel
+  * https://babeljs.io/docs/en/next/babel-preset-env
+* Rollup
+  * <https://github.com/rollup/rollup-starter-lib>
+  * <https://github.com/rollup/rollup-plugin-babel/issues/253>
+  * <https://github.com/rollup/rollup/wiki/pkg.module>
+  * <https://stackoverflow.com/questions/45327218/how-do-i-get-jest-to-run-tests-against-a-rollupbabel-build>
+* Tape
+  * <https://ci.testling.com/guide/tape>
