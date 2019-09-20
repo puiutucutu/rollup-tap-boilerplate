@@ -12,9 +12,9 @@ function add(x, y) {
   }
 
   // try out ES6 features to see transpiled output
-  const a = new Promise();
+  const a = new Promise((resolve, reject) => resolve());
   const b = new Map();
-  const values = new Set(x, y);
+  const values = new Set([x, y]);
 
   return [...values].reduce((acc, value) => acc + value, 0);
 }
