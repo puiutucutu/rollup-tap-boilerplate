@@ -26,7 +26,12 @@ module.exports = [
         exports: "named"
       }
     ],
-    plugins: [...babelPlugin]
+    plugins: [
+      nodeResolve(),
+      commonjs(),
+      json(),
+      ...babelPlugin
+    ]
   },
   {
     input: "src/index.js",
@@ -35,6 +40,12 @@ module.exports = [
       format: "umd",
       name: "TRB" // Tape Rollup Boilerplate
     },
-    plugins: [nodeResolve(), json(), ...babelPlugin, commonjs(), terser()]
+    plugins: [
+      nodeResolve(),
+      commonjs(),
+      json(),
+      ...babelPlugin,
+      terser()
+    ]
   }
 ];

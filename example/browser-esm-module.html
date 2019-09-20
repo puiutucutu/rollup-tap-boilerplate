@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>browser-esm-module example</title>
-</head>
-<body>
+  </head>
+  <body>
+    <script type="module">
+      import { add } from "../dist/tape-rollup-boilerplate.esm.js";
+      console.log(add(2, 3));
+    </script>
 
-<script type="module">
-  import { add } from "../dist/tape-rollup-boilerplate.esm";
-  console.log(add(2, 3));
-</script>
-
-<script nomodule src="../dist/tape-rollup-boilerplate.umd.js"></script>
-
-</body>
+    <script nomodule src="../dist/tape-rollup-boilerplate.umd.js"></script>
+  </body>
 </html>

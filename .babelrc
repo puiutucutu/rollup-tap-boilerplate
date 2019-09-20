@@ -9,11 +9,12 @@
         [
           "@babel/preset-env",
           {
-            "modules": false,
             "targets": {
               "browsers": ["ie >= 11"]
             },
-            "useBuiltIns": "usage"
+            "modules": false,
+            "useBuiltIns": "usage",
+            "corejs": "3"
           }
         ]
       ]

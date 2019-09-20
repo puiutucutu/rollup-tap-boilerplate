@@ -11,7 +11,11 @@ function add(x, y) {
     throw new TypeError("Supplied arg `x` or `y` is not a valid number");
   }
 
-  return x + y;
+  const a = new Promise();
+  const b = new Map();
+  const values = new Set(x, y);
+
+  return [...values].reduce((acc, value) => acc + value, 0);
 }
 
 export { add };

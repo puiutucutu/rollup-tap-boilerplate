@@ -58,6 +58,7 @@ npm run coverage
 
 ## Resources
 
+* https://babeljs.io/docs/en/next/babel-preset-env
 * <https://ci.testling.com/guide/tape>
 
 ### Using Rollup
