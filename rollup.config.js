@@ -30,7 +30,8 @@ module.exports = [
       nodeResolve(),
       commonjs(),
       json(),
-      ...babelPlugin
+      ...babelPlugin,
+      terser()
     ]
   },
   {
