@@ -1,7 +1,9 @@
 /**
+ * Adds two numbers together.
+ *
  * @param {Number} x
  * @param {Number} y
- * @return {Number}
+ * @return {Number} The sum of adding two numbers.
  */
 function add(x, y) {
   if (

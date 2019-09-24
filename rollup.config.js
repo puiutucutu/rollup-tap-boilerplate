@@ -30,8 +30,7 @@ module.exports = [
       nodeResolve(),
       commonjs(),
       json(),
-      ...babelPlugin,
-      terser()
+      ...babelPlugin
     ]
   },
   {
@@ -39,7 +38,7 @@ module.exports = [
     output: {
       file: pkg.browser,
       format: "umd",
-      name: "TRB" // Tape Rollup Boilerplate
+      name: "trb" // Tape Rollup Boilerplate
     },
     plugins: [
       nodeResolve(),
