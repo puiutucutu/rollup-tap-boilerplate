@@ -1,4 +1,4 @@
-# tape-rollup-boilerplate 
+# rollup-tap-boilerplate 
 
 A repo containing boilerplate for new node projects. Ready for npm publishing.
  

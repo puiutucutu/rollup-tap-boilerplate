@@ -38,7 +38,7 @@ module.exports = [
     output: {
       file: pkg.browser,
       format: "umd",
-      name: "trb", // e.g., Tape Rollup Boilerplate,
+      name: "trb", // e.g., Tap Rollup Boilerplate,
       sourcemap: true
     },
     plugins: [

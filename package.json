@@ -1,10 +1,10 @@
 {
-  "name": "tape-rollup-boilerplate",
-  "description": "config for unit testing and coverage with tap and bundling with rollup",
+  "name": "rollup-tap-boilerplate",
+  "description": "a boilerplate for bundling with rollup and unit testing and code coverage with tap",
   "version": "1.0.0",
-  "main": "dist/tape-rollup-boilerplate.cjs.js",
-  "module": "dist/tape-rollup-boilerplate.esm.js",
-  "browser": "dist/tape-rollup-boilerplate.umd.js",
+  "main": "dist/rollup-tap-boilerplate.cjs.js",
+  "module": "dist/rollup-tap-boilerplate.esm.js",
+  "browser": "dist/rollup-tap-boilerplate.umd.js",
   "scripts": {
     "example:cjs": "node ./example/node-cjs.js",
     "example:esm": "node -r esm ./example/node-esm.js",
@@ -44,6 +44,6 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/puiutucutu/tape-rollup-boilerplate.git"
+    "url": "https://github.com/puiutucutu/rollup-tap-boilerplate.git"
   }
 }

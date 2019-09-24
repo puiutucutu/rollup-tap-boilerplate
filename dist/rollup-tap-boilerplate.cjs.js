@@ -1,3 +1,7 @@
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
 var fails = function (exec) {
   try {
     return !!exec();
@@ -2182,5 +2186,5 @@ function add(x, y) {
   }, 0);
 }
 
-export { add };
-//# sourceMappingURL=tape-rollup-boilerplate.esm.js.map
+exports.add = add;
+//# sourceMappingURL=rollup-tap-boilerplate.cjs.js.map
