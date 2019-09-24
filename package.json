@@ -16,7 +16,7 @@
     "test:watch": "tap --watch test/**/*.test.js",
     "doc": "rimraf docs/* & npm run doc:html",
     "doc:html": "./node_modules/.bin/documentation build ./src/index.js -f html -o ./docs",
-    "prepublishOnly": "npm run test && npm run documentation && npm run build",
+    "prepublishOnly": "npm run test && npm run doc && npm run build",
     "release": "np"
   },
   "dependencies": {
