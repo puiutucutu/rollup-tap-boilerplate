@@ -58,7 +58,7 @@ npm run coverage
 * `targets` 
   * set for compatability in javascript runtime environments in `ie11` and above
   * this can be adjusted to different environments as needed (with the benefit of smaller bundle sizes) by changing this property
-* see https://babeljs.io/docs/en/next/babel-preset-env#targets
+  * see https://babeljs.io/docs/en/next/babel-preset-env#targets
 * `useBuiltIns` 
   * currently set to `usage` 
   * this instructs `babel` and `corejs` to import those polyfills actually used in your code that are missing in the target runtime environment
