@@ -14,8 +14,8 @@
     "test": "tap --reporter=classic test/**/*.test.js",
     "test:output-tap": "tap --reporter=tap --no-coverage test/**/*.test.js",
     "test:watch": "tap --watch test/**/*.test.js",
-    "documentation": "rimraf docs/* & npm run documentation:html",
-    "documentation:html": "./node_modules/.bin/documentation build ./src/index.js -f html -o ./docs",
+    "doc": "rimraf docs/* & npm run doc:html",
+    "doc:html": "./node_modules/.bin/documentation build ./src/index.js -f html -o ./docs",
     "prepublishOnly": "npm run test && npm run documentation && npm run build",
     "release": "np"
   },
