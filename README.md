@@ -41,8 +41,6 @@ See these links for more details regarding modules.
 
 ### Tests
 
-Note that `@babel/register` is used on the code before it goes to `tape` in order to facilitate the use of ES6 imports with node.
-
 ```
 npm run test
 ```
