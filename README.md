@@ -2,8 +2,8 @@
 
 A repo containing boilerplate for new node projects. Ready for npm publishing.
  
-* `tape` for unit testing 
-* code coverage with `nyc` 
+* `tap` for unit testing 
+* code coverage with `nyc` via `tap` 
 * bundling with `rollup` and transpiling with `babel`
 * builds `.cjs`, `.esm` and `.umd` files
 
