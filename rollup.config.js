@@ -18,12 +18,14 @@ module.exports = [
       {
         file: pkg.main,
         format: "cjs",
-        exports: "named"
+        exports: "named",
+        sourcemap: true
       },
       {
         file: pkg.module,
         format: "esm",
-        exports: "named"
+        exports: "named",
+        sourcemap: true
       }
     ],
     plugins: [
@@ -38,7 +40,8 @@ module.exports = [
     output: {
       file: pkg.browser,
       format: "umd",
-      name: "trb" // Tape Rollup Boilerplate
+      name: "trb", // e.g., Tape Rollup Boilerplate,
+      sourcemap: true
     },
     plugins: [
       nodeResolve(),
