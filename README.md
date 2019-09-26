@@ -91,8 +91,8 @@ commands for coverage.
 
 **Workaround Three**
 
-Explicitly list the test files. This defeats the purpose of keeping config 
-like since `tap` already knows where to look for files. As an alternative, 
+Explicitly list the test files. This needlessly bloats the config since 
+`tap` already knows where to look for files. As an alternative, 
 one could opt to use a `.taprc` config file.
 
 ```json
