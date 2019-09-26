@@ -77,7 +77,8 @@ There are at least three workarounds. This project chose work around two.
 **Workaround Two**
 
 Similar to the previous solution with the added benefit that you can 
-keep the desired cli commands for running the tests separate.
+keep the desired cli commands for running the tests separate from the cli 
+commands for coverage.
 
 ```json
 {
