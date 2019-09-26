@@ -125,5 +125,5 @@ one could opt to use a `.taprc` config file.
   * <https://github.com/rollup/rollup-plugin-babel/issues/253>
   * <https://github.com/rollup/rollup/wiki/pkg.module>
   * <https://stackoverflow.com/questions/45327218/how-do-i-get-jest-to-run-tests-against-a-rollupbabel-build>
-* Tape
-  * <https://ci.testling.com/guide/tape>
+* Tap
+  * <https://node-tap.org/docs/cli/
