@@ -51,6 +51,58 @@ npm run test
 npm run coverage
 ```
 
+A note on coverage.
+
+> If the --check-coverage or --coverage-report options are provided explicitly,
+  and no test files are specified, then a coverage report or coverage check will
+  be run on the data from the last test run. - https://node-tap.org/docs/cli/
+
+This means that running `tap --coverage-report=lcov` on its own will not output 
+any coverage data. You need the `.nyc_output` cache from a previous full 
+run`tap` in order to get code line coverage.
+
+Note that `--coverage-report=lcov` instructs that the coverage data is output to html files instead of stdout.
+  
+There are at least three workarounds. This project chose work around one.
+
+**Workaround One**
+
+```json
+{
+  "scripts": {
+    "coverage": "tap && tap --coverage-report=lcov"
+  }
+}
+```
+**Workaround Two**
+
+Similar to the previous solution with the added benefit that you can 
+keep the desired cli commands for running the tests separate.
+
+```json
+{
+  "scripts": {
+    "coverage": "npm run test && tap --coverage-report=lcov",
+    "test": "tap --reporter=classic"
+  }
+}
+```
+
+**Workaround Three**
+
+Explicitly list the test files. This defeats the purpose of keeping config 
+like since `tap` already knows where to look for files. As an alternative, 
+one could opt to use a `.taprc` config file.
+
+```json
+{
+  "scripts": {
+    "coverage": "tap --coverage-report=lcov src/**/tests/*.test.js",
+    "test": "tap --reporter=classic"
+  }
+}
+```
+
 ## Usage
 
 ### `.babelrc` file
