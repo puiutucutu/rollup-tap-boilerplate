@@ -63,7 +63,7 @@ run`tap` in order to get code line coverage.
 
 Note that `--coverage-report=lcov` instructs that the coverage data is output to html files instead of stdout.
   
-There are at least three workarounds. This project chose work around one.
+There are at least three workarounds. This project chose work around two.
 
 **Workaround One**
 
