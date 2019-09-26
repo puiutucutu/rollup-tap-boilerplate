@@ -10,7 +10,7 @@
     "example:esm": "node -r esm ./example/node-esm.js",
     "example:umd": "node ./example/node-umd.js",
     "build": "cross-env BABEL_ENV=build rollup -c",
-    "coverage": "tap --reporter=silent --coverage-report=lcov",
+    "coverage": "tap --coverage-report=lcov test/**/*.test.js",
     "test": "tap --reporter=classic",
     "test:output-tap": "tap --reporter=tap --no-coverage",
     "test:watch": "tap --watch",
