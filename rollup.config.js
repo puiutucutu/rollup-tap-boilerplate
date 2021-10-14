@@ -1,7 +1,7 @@
 import commonjs from "rollup-plugin-commonjs";
 import babel from "rollup-plugin-babel";
 import json from "rollup-plugin-json";
-import nodeResolve from "rollup-plugin-node-resolve";
+import resolve from "rollup-plugin-node-resolve";
 import { terser } from "rollup-plugin-terser";
 import pkg from "./package.json";
 
@@ -27,7 +27,7 @@ module.exports = [
       }
     ],
     plugins: [
-      nodeResolve(),
+      resolve(),
       commonjs(),
       json(),
       ...babelPlugin
@@ -42,7 +42,7 @@ module.exports = [
       sourcemap: true
     },
     plugins: [
-      nodeResolve(),
+      resolve(),
       commonjs(),
       json(),
       ...babelPlugin,
