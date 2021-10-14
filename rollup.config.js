@@ -22,7 +22,7 @@ module.exports = [
       },
       {
         file: pkg.module,
-        format: "esm",
+        format: "es",
         sourcemap: true,
       },
     ],
