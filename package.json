@@ -26,6 +26,9 @@
     "prepublishOnly": "npm run test && npm run doc && npm run build",
     "release": "np"
   },
+  "files": [
+    "/dist"
+  ],
   "dependencies": {
     "core-js": "^3.2.1"
   },
