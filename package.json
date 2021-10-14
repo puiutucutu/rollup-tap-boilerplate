@@ -20,10 +20,10 @@
     "doc": "npm run clean && npm run doc:html && npm run doc:md",
     "doc:html": "documentation build ./src/index.js -f html -o docs",
     "doc:md": "documentation build src/index.js -f md -o docs/documentation.md",
-    "prepublishOnly": "npm run test && npm run doc && npm run build",
     "preversion": "npm run clean",
     "version": "npm run build && git add -A dist",
     "postversion": "git push && git push --tags",
+    "prepublishOnly": "npm run test && npm run doc && npm run build",
     "release": "np"
   },
   "dependencies": {
