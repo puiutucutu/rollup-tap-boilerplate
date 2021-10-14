@@ -6,6 +6,9 @@
   "module": "dist/rollup-tap-boilerplate.esm.js",
   "browser": "dist/rollup-tap-boilerplate.umd.js",
   "scripts": {
+    "clean:dist": "rimraf docs/*",
+    "clean:docs": "rimraf dist/*",
+    "clean": "npm run clean:dist && npm run clean:docs",
     "example:cjs": "node ./example/node-cjs.js",
     "example:esm": "node -r esm ./example/node-esm.js",
     "example:umd": "node ./example/node-umd.js",
@@ -14,10 +17,13 @@
     "test": "tap --reporter=classic",
     "test:output-tap": "tap --reporter=tap --no-coverage",
     "test:watch": "tap --watch",
-    "doc": "rimraf docs/* & npm run doc:html & npm run doc:md",
+    "doc": "npm run clean && npm run doc:html && npm run doc:md",
     "doc:html": "documentation build ./src/index.js -f html -o docs",
     "doc:md": "documentation build src/index.js -f md -o docs/documentation.md",
     "prepublishOnly": "npm run test && npm run doc && npm run build",
+    "preversion": "npm run clean",
+    "version": "npm run build && git add -A dist",
+    "postversion": "git push && git push --tags",
     "release": "np"
   },
   "dependencies": {
