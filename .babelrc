@@ -12,7 +12,7 @@
               "browsers": ["ie >= 11"]
             },
             "useBuiltIns": "usage",
-            "corejs": "3.2"
+            "corejs": "3.18.3"
           }
         ]
       ]
